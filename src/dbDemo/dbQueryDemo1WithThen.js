@@ -1,21 +1,16 @@
 const { makeDBConnectionPool } = require("./dbHelp");
 
-function mainTask() {
-    const pool = makeDBConnectionPool("async-demo");
+const pool = makeDBConnectionPool("async-demo");
 
-    const promiseOfDBResult = pool.query("select * from hiscores");
+const promiseOfDBResult = pool.query("select * from hiscores");
 
-    // console.log("DB query has started!");
+console.log("DB query has started!");
 
-    promiseOfDBResult.then(handleCompletedPromise);
+promiseOfDBResult.then(handleCompletedPromise);
 
-    // console.log("Result-handler has been registered!");
-}
+console.log("Result-handler has been registered!");
 
 function handleCompletedPromise(result) {
     console.log("DB query has finished!  Results: ");
     console.log("Here are the query rows: ", result.rows);
 }
-
-mainTask();
-console.log("Done with mainTask()");
