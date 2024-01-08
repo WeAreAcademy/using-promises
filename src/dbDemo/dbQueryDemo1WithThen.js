@@ -5,11 +5,11 @@ function mainTask() {
 
     const promiseOfDBResult = pool.query("select * from hiscores");
 
-    console.log("DB query has started!");
+    // console.log("DB query has started!");
 
     promiseOfDBResult.then(handleCompletedPromise);
 
-    console.log("Result-handler has been registered!");
+    // console.log("Result-handler has been registered!");
 }
 
 function handleCompletedPromise(result) {
