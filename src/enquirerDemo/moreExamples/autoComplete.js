@@ -1,36 +1,14 @@
-"use strict";
+const { prompt } = require("enquirer");
 
-const { AutoComplete } = require("enquirer");
-
-const prompt = new AutoComplete({
+const promiseOfInput = prompt({
+    type: "autocomplete",
     name: "flavor",
     message: "Pick your favorite flavor",
     limit: 10,
-    choices: [
-        "Almond",
-        "Apple",
-        "Banana",
-        "Blackberry",
-        "Blueberry",
-        "Cherry",
-        "Chocolate",
-        "Cinnamon",
-        "Coconut",
-        "Cranberry",
-        "Grape",
-        "Nougat",
-        "Orange",
-        "Pear",
-        "Pineapple",
-        "Raspberry",
-        "Strawberry",
-        "Vanilla",
-        "Watermelon",
-        "Wintergreen",
-    ],
+    choices: ["Apple", "Blackberry", "Watermelon"],
 });
+promiseOfInput.then(handleResult);
 
-prompt
-    .run()
-    .then((answer) => console.log("Answer:", answer))
-    .catch(console.error);
+function handleResult(answer) {
+    console.log("Ok Making ice-cream with:", answer.flavor);
+}

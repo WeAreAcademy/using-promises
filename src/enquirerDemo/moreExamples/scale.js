@@ -1,5 +1,6 @@
 const { Scale } = require("enquirer");
-const prompt = new Scale({
+
+const scalePrompt = new Scale({
     name: "experience",
     message: "Please rate your experience",
     scale: [
@@ -39,7 +40,11 @@ const prompt = new Scale({
     ],
 });
 
-prompt
-    .run()
-    .then((value) => console.log("ANSWERS:", value))
-    .catch(console.error);
+const promiseOfInput = scalePrompt.run();
+
+function handleInput(userInput) {
+    console.log("Thanks!  Responses were: ", userInput);
+    // sendEmailWithFeedback(userInput);
+}
+
+promiseOfInput.then(handleInput);
