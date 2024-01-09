@@ -6,6 +6,7 @@ async function mainTask() {
         name: "faveColour",
         message: "What is your favourite colour?",
     });
+
     console.log("promise has completed!");
     console.log("response: ", response);
 }
