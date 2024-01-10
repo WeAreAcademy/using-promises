@@ -1,8 +1,9 @@
-const axios = require("axios");
+const axios = require("axios").default;
+
 function mainTask() {
-    const resultingPromise = axios.get(
-        "https://jsonplaceholder.typicode.com/users/1" //or https://swapi.dev/api/people/1
-    );
+    const url = "https://jsonplaceholder.typicode.com/users/1"; //or https://swapi.dev/api/people/1
+
+    const resultingPromise = axios.get(url);
     console.log("fetch started");
     resultingPromise.then(handleCompletedPromise);
 }
