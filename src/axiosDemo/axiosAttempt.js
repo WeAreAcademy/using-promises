@@ -1,5 +1,4 @@
 const axios = require("axios").default;
 
-const url = "https://swapi.dev/api/people/1";
-
+const url = "https://jsonplaceholder.typicode.com/users/3";
 const resultingPromise = axios.get(url);
