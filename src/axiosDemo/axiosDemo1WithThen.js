@@ -1,6 +1,7 @@
 const axios = require("axios").default;
 
-const url = "https://swapi.dev/api/people/1"; //or https://jsonplaceholder.typicode.com/users/1
+//or https://jsonplaceholder.typicode.com/users/1
+const url = "https://swapi.dev/api/people/1";
 
 const resultingPromise = axios.get(url);
 console.log("Asked axios to get " + url);
