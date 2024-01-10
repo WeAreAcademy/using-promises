@@ -4,9 +4,11 @@
  * Simulates work being done asynchronously.
  * @returns {Promise<number>} wait at least 4 seconds then return a number
  */
-function anAsyncFunctionWhichReturnsAPromise() {
+function someAsyncFunction() {
     const eventualResult = 42;
     return new Promise((resolve, reject) =>
         setTimeout(() => resolve(eventualResult), 4000)
     );
 }
+
+module.exports = { someAsyncFunction };
