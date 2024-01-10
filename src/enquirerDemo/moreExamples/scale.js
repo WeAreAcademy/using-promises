@@ -22,21 +22,6 @@ const scalePrompt = new Scale({
             message: "The website is easy to navigate.",
             initial: 2,
         },
-        {
-            name: "images",
-            message: "The website usually has good images.",
-            initial: 2,
-        },
-        {
-            name: "upload",
-            message: "The website makes it easy to upload images.",
-            initial: 2,
-        },
-        {
-            name: "colors",
-            message: "The website has a pleasing color palette.",
-            initial: 2,
-        },
     ],
 });
 
@@ -44,7 +29,6 @@ const promiseOfInput = scalePrompt.run();
 
 function handleInput(userInput) {
     console.log("Thanks!  Responses were: ", userInput);
-    // sendEmailWithFeedback(userInput);
 }
 
 promiseOfInput.then(handleInput);

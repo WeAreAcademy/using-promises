@@ -8,5 +8,5 @@ async function mainTask() {
     console.log(dbResult.rows);
 }
 
-mainTask();
+mainTask(); //watch out, this returns a promise before the work is done!
 console.log("AFTER mainTask() was called");
