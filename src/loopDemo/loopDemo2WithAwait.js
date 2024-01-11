@@ -1,4 +1,8 @@
-const { Confirm, NumberPrompt } = require("enquirer");
+//This example is a little more elaborated:
+// * we show how you might store the user progress in the DB
+// * and the user is also given the choice to quit on each loop
+
+const { Confirm, prompt } = require("enquirer");
 
 async function mainLoop() {
     let wantToQuit = false;
@@ -10,14 +14,14 @@ async function mainLoop() {
 }
 
 async function askOneQuestion() {
-    const numToGuess = 1 + Math.round(Math.random() * 3);
+    const numToGuess = randomInt();
 
-    const inputNum = await new NumberPrompt({
+    const result = await prompt({
+        type: "number",
         name: "guessedNumber",
         message: "Guess a number between 1 and 3",
-    }).run();
-
-    const guess = parseInt(inputNum);
+    });
+    const guess = parseInt(result.guessedNumber);
     const guessedCorrectly = numToGuess === guess;
     if (guessedCorrectly) {
         console.log("correct");
@@ -29,7 +33,7 @@ async function askOneQuestion() {
 }
 
 async function storeAttemptInDB(attemptInfo) {
-    //do db insert here
+    //we would do db insert here
 }
 
 async function offerQuitOption() {
@@ -42,3 +46,7 @@ async function offerQuitOption() {
 }
 
 mainLoop();
+
+function randomInt() {
+    return Math.floor(1 + Math.random() * 3);
+}
