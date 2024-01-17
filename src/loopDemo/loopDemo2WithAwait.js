@@ -1,19 +1,18 @@
 //This example is a little more elaborated:
 // * we show how you might store the user progress in the DB
 // * and the user is also given the choice to quit on each loop
-
 const { Confirm, prompt } = require("enquirer");
 
 async function mainLoop() {
     let wantToQuit = false;
     while (!wantToQuit) {
-        const guessedCorrectly = await askOneQuestion();
+        const guessedCorrectly = await askOneQuestionAndGiveFeedback();
         await storeAttemptInDB(guessedCorrectly);
         wantToQuit = await offerQuitOption();
     }
 }
 
-async function askOneQuestion() {
+async function askOneQuestionAndGiveFeedback() {
     const numToGuess = randomInt();
 
     const result = await prompt({
@@ -47,6 +46,7 @@ async function offerQuitOption() {
 
 mainLoop();
 
+/** Return a random integer between 1 and 3. */
 function randomInt() {
     return Math.floor(1 + Math.random() * 3);
 }

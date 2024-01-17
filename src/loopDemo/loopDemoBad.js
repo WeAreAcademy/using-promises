@@ -4,13 +4,14 @@ const { prompt } = require("enquirer");
 
 function badLoop() {
     while (true) {
-        askOneQuestion();
+        askOneQuestionAndProcessAnswer();
+        console.log("ok done one iteration");
     }
 }
 
 badLoop();
 
-function askOneQuestion() {
+function askOneQuestionAndProcessAnswer() {
     console.log("About to prompt user");
     promptUser().then(processEventualAnswer);
 }

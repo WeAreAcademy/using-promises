@@ -5,13 +5,13 @@ const { prompt } = require("enquirer");
 
 async function mainLoop() {
     while (true) {
-        await askOneQuestion();
+        await askOneQuestionAndProcessAnswer();
     }
 }
 
 mainLoop();
 
-async function askOneQuestion() {
+async function askOneQuestionAndProcessAnswer() {
     const numToGuess = 3; //not a fun game!
 
     const result = await prompt({
