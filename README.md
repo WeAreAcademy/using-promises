@@ -12,14 +12,20 @@ To run any demo, run the following, replacing the fake path with the path to the
 
 `node src/path/to/demo.js`
 
-there are a couple of basic demos which have shortcuts
+### shortcuts
 
-`yarn demo1`
+There are a few basic demos which have shortcuts - mostly to support me in recording videos.
+However, note that some of the more substantial demos are not linked here, so you will likely want to use `node path/to/file` as above in order to experiment with those programs.
 
-`yarn demo2`
+Here's a snapshot of what they (at one point) mapped to. Look in [./package.json](./package.json) to be sure
 
-`yarn demo3`
+-   `demo1` runs [src/enquirerDemo/enquirerDemo1dWithThen.js](src/enquirerDemo/enquirerDemo1dWithThen.js)
+-   `demo2` runs [src/dbDemo/dbQueryDemo1WithThen.js](src/dbDemo/dbQueryDemo1WithThen.js)
+-   `demo3` runs [src/axiosDemo/axiosDemo1WithThen.js](src/axiosDemo/axiosDemo1WithThen.js)
+-   `demo4` runs [src/twoPromisesDemo/twoPromisesDemo1WithAwait.js](src/twoPromisesDemo/twoPromisesDemo1WithAwait.js)
+-   `demo5` runs [src/twoPromisesDemo/twoPromisesDemo2WithAwait.js](src/twoPromisesDemo/twoPromisesDemo2WithAwait.js)
+-   `demo6` runs [src/loopDemo/loopDemo1WithAwait.js](src/loopDemo/loopDemo1WithAwait.js)
 
 ## Doing further experimentation
 
-It's recommended you use this repo for your initial further experiments with enquirer, node-postgres, and axios.  It is suggested you just make another directory under `src/` for your code, and either start a new js file from from scratch in there, or copy into that directory one of the demo files that's relevant to your task, and then modify it to accomplish your task.
+It's recommended you use this repo for your initial further experiments with enquirer, node-postgres, and axios. It is suggested you just make another directory under `src/` for your code, and either start a new js file from from scratch in there, or copy into that directory one of the demo files that's relevant to your task, and then modify it to accomplish your task.
