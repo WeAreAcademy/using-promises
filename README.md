@@ -1,8 +1,9 @@
-Code examples accompanying a video series introducing working with promises by example.
+Code examples accompanying a video series introducing working with promises by example,
+["A minimum of asynchronous JavaScript - Promises"](https://www.notion.so/weareacademy/abc-A-minimum-of-asynchronous-JavaScript-Promises-d364b6efb6fb466bb724facddf31d3cb)
 
 ## Install
 
-Run this command to install all required libraries for the demos
+Run this command to install all required libraries for the demos (as specified in [./package.json](./package.json)).
 
 `yarn`
 
