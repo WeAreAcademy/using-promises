@@ -8,11 +8,15 @@
     "scripts": {
         "demo1": "node src/enquirerDemo/enquirerDemo1dWithThen.js",
         "demo2": "node src/dbDemo/dbQueryDemo1WithThen.js",
-        "demo3": "node src/axiosDemo/axiosDemo1WithThen.js"
+        "demo3": "node src/axiosDemo/axiosDemo1WithThen.js",
+        "demo4": "node src/twoPromisesDemo/twoPromisesDemo1WithAwait.js"
     },
     "dependencies": {
         "axios": "^1.6.5",
         "enquirer": "^2.4.1",
         "pg": "^8.11.3"
+    },
+    "devDependencies": {
+        "@types/pg": "^8.10.9"
     }
 }
