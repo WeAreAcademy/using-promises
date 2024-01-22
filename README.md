@@ -7,6 +7,13 @@ Run this command to install all required libraries for the demos (as specified i
 
 `yarn`
 
+### Database creation and population
+
+To run the database demos you will need to:
+
+1. create a _local_ database called `async-demo`, and then...
+2. populate it using the sql in [src/dbDemo/sql/creation.sql](src/dbDemo/sql/creation.sql)
+
 ## Running the demos
 
 To run any demo, run the following, replacing the fake path with the path to the relevant demo
